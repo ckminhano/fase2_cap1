@@ -30,6 +30,8 @@
 
 ## Descricao
 
+Video demonstrativo: https://www.youtube.com/watch?v=SrPnKHy3MwA
+
 O projeto **FarmTech Solutions - Fase 2** e um sistema de irrigacao inteligente desenvolvido para a disciplina da FIAP. O sistema utiliza um **ESP32** simulado na plataforma **Wokwi** para monitorar sensores agricolas e controlar automaticamente uma bomba d'agua (rele), otimizando a irrigacao de uma lavoura de **Milho**.
 
 Alem do controle baseado em sensores locais, o projeto integra dados meteorologicos da API publica **Open-Meteo** (open-meteo.com) atraves de um script Python, permitindo que a decisao de irrigar leve em conta a previsao de chuva das proximas horas — economizando agua quando a chuva natural for suficiente. A escolha dessa API foi motivada pelo fato de ser gratuita, totalmente publica e **nao exigir cadastro ou API key**, simplificando a reproducao do projeto.

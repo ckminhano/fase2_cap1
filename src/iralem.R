@@ -23,9 +23,6 @@
 
 set.seed(42)  # reprodutibilidade
 
-# Garante pasta de saida para graficos
-if (!dir.exists("assets")) dir.create("assets", recursive = TRUE)
-
 # ============================================================
 #  1) HISTORICO DE LEITURAS DOS SENSORES
 # ============================================================
