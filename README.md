@@ -15,7 +15,6 @@
 - <a href="https://www.linkedin.com/in/joão-pedro-zavanela-andreu-119663250/">João Pedro Zavanela Andreu - RM570231</a>
 - <a href="https://www.linkedin.com/in/jessicapmgomes/">Jéssica Paula Miranda Gomes - RM572120</a>
 - <a href="https://www.linkedin.com/in/caike-minhano/">Caike Minhano - RM569255</a>
-- Rafael Briani Rodrigues da Costa - RM573086
 - Renan Lucas Seni de Souza - RM570862
 
 ## Professores:
