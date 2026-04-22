@@ -1,0 +1,250 @@
+{
+    "version": 1,
+    "author": "FarmTech Solutions",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-esp32-devkit-c-v4",
+            "id": "esp",
+            "top": 0,
+            "left": 0,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-dht22",
+            "id": "dht1",
+            "top": -95.7,
+            "left": 359.4,
+            "attrs": {
+                "humidity": "55"
+            }
+        },
+        {
+            "type": "wokwi-photoresistor-sensor",
+            "id": "ldr1",
+            "top": 89.6,
+            "left": -325.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btnN",
+            "top": 198.2,
+            "left": 172.8,
+            "attrs": {
+                "color": "green",
+                "label": "N - Nitrogênio"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btnP",
+            "top": 303.8,
+            "left": 172.8,
+            "attrs": {
+                "color": "green",
+                "label": "P - Fósforo"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btnK",
+            "top": 399.8,
+            "left": 172.8,
+            "attrs": {
+                "color": "green",
+                "label": "K - Potássio"
+            }
+        },
+        {
+            "type": "wokwi-relay-module",
+            "id": "rly1",
+            "top": 190,
+            "left": 280,
+            "attrs": {
+                "color": "blue"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": -42,
+            "left": -121,
+            "attrs": {
+                "color": "red",
+                "label": "Bomba ON"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": -91.75,
+            "left": -68.6,
+            "rotate": 180,
+            "attrs": {
+                "value": "220"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "esp:TX",
+            "$serialMonitor:RX",
+            "",
+            []
+        ],
+        [
+            "esp:RX",
+            "$serialMonitor:TX",
+            "",
+            []
+        ],
+        [
+            "dht1:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "dht1:GND",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "dht1:SDA",
+            "esp:15",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "ldr1:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "ldr1:GND",
+            "esp:GND.2",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "ldr1:AO",
+            "esp:34",
+            "yellow",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "btnN:1.l",
+            "esp:GND.1",
+            "black",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "btnN:2.l",
+            "esp:32",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "btnP:1.l",
+            "esp:GND.1",
+            "black",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "btnP:2.l",
+            "esp:33",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "btnK:1.l",
+            "esp:GND.1",
+            "black",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "btnK:2.l",
+            "esp:25",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "rly1:VCC",
+            "esp:VIN",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "rly1:GND",
+            "esp:GND.2",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "rly1:IN",
+            "esp:26",
+            "orange",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:27",
+            "r1:1",
+            "orange",
+            [
+                "v-211.2",
+                "h-32.01"
+            ]
+        ],
+        [
+            "r1:2",
+            "led1:A",
+            "orange",
+            [
+                "h-1.2",
+                "v86.4"
+            ]
+        ],
+        [
+            "led1:C",
+            "esp:GND.3",
+            "black",
+            [
+                "v0"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
